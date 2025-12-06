@@ -7,12 +7,11 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor drawingApplication</div>
+    <div id="PageTitle">Class AppCanvas</div>
     <div id="Contents" />
 
     
- Constructor for drawingApplication form. Initializes canvas and sets canvas refernce to commandfactory, program
- makes parser work with command factory and stored program
+ AppCanvas class implements ICanvas interface. Draws various shapes and text on a bitmap canvas.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -27,7 +26,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public drawingApplication()</pre></td></tr></tbody></table>
+    public class AppCanvas : ICanvas</pre></td></tr></tbody></table>
     
     
     
@@ -41,11 +40,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method drawingBox_Paint</div>
+    <div id="PageTitle">Constructor AppCanvas</div>
     <div id="Contents" />
 
     
- Paint event of drawing panel
+ Constructor of AppCanvas class,
+ Takes the length and width of the canvas as parameters
+ sets current cursor position to 0,0
+ sets new pen and smoothing mode
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,14 +62,14 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void drawingBox_Paint(object sender, PaintEventArgs e)</pre></td></tr></tbody></table>
+    public AppCanvas(int xsize, int ysize)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>sender</div><div class='ParameterCommentContainer'>
-
+<div class='CommentParameterName'>xsize</div><div class='ParameterCommentContainer'>
+length of the canvas
 </div>
-<div class='CommentParameterName'>e</div><div class='ParameterCommentContainer'>
-
+<div class='CommentParameterName'>ysize</div><div class='ParameterCommentContainer'>
+width of the canvas
 </div>
 
     
@@ -81,12 +83,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method ExecuteCommands</div>
+    <div id="PageTitle">Property Xpos</div>
     <div id="Contents" />
 
     
- Executes all commands in the command text box by splitiing the lines and parsing
-Each command is added to stored program and then executed line by line
+ sets and gets the current x position of the cursor
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -101,7 +102,7 @@ Each command is added to stored program and then executed line by line
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void ExecuteCommands()</pre></td></tr></tbody></table>
+    public int Xpos</pre></td></tr></tbody></table>
     
     
     
@@ -115,11 +116,11 @@ Each command is added to stored program and then executed line by line
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method ExecuteSingleCommand</div>
+    <div id="PageTitle">Property Ypos</div>
     <div id="Contents" />
 
     
- Executes single command from the single command textbox
+ sets and gets the current y position of the cursor
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -134,40 +135,86 @@ Each command is added to stored program and then executed line by line
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void ExecuteSingleCommand(string commandLine)</pre></td></tr></tbody></table>
+    public int Ypos</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Property PenColour</div>
+    <div id="Contents" />
+
+    
+ sets and gets the current pen colour
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public object PenColour</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Circle</div>
+    <div id="Contents" />
+
+    
+ creates a circle with given radius
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void Circle(int radius, bool filled = false)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>commandLine</div><div class='ParameterCommentContainer'>
-the command written on the text box
+<div class='CommentParameterName'>radius</div><div class='ParameterCommentContainer'>
+radius of the circle
+</div>
+<div class='CommentParameterName'>filled</div><div class='ParameterCommentContainer'>
+filled circle true or false
 </div>
 
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>NotImplementedException</span></td>
-<td></td>
-</tr>
-</table
-</div>
-</div>
-
     
     
 
@@ -175,11 +222,11 @@ the command written on the text box
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method runCommand_Click</div>
+    <div id="PageTitle">Method Clear</div>
     <div id="Contents" />
 
     
- run button for textbox which calls the execute command method
+ clears the canvas by filling it with white color
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -194,16 +241,9 @@ the command written on the text box
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void runCommand_Click(object sender, EventArgs e)</pre></td></tr></tbody></table>
+    public void Clear()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>sender</div><div class='ParameterCommentContainer'>
-
-</div>
-<div class='CommentParameterName'>e</div><div class='ParameterCommentContainer'>
-
-</div>
-
+    
     
     
     
@@ -215,11 +255,11 @@ the command written on the text box
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method commandTextBox_KeyPress</div>
+    <div id="PageTitle">Method DrawTo</div>
     <div id="Contents" />
 
     
- Event handler for key press in command text box shift + enter to execute commands
+ Draws a line from current cursor position to given x and y position
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -234,14 +274,14 @@ the command written on the text box
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void commandTextBox_KeyPress(object sender, KeyPressEventArgs e)</pre></td></tr></tbody></table>
+    public void DrawTo(int x, int y)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>sender</div><div class='ParameterCommentContainer'>
-
+<div class='CommentParameterName'>x</div><div class='ParameterCommentContainer'>
+destination x coordinate
 </div>
-<div class='CommentParameterName'>e</div><div class='ParameterCommentContainer'>
-
+<div class='CommentParameterName'>y</div><div class='ParameterCommentContainer'>
+destination y coordinate
 </div>
 
     
@@ -255,11 +295,11 @@ the command written on the text box
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method clearDebug_Click</div>
+    <div id="PageTitle">Method getBitmap</div>
     <div id="Contents" />
 
     
- clears the debug text box
+ gets the bitmap of the canvas
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -274,17 +314,14 @@ the command written on the text box
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void clearDebug_Click(object sender, EventArgs e)</pre></td></tr></tbody></table>
+    public object getBitmap()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>sender</div><div class='ParameterCommentContainer'>
-
-</div>
-<div class='CommentParameterName'>e</div><div class='ParameterCommentContainer'>
+    
+    <div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
 
 </div>
 
-    
     
     
     
@@ -295,11 +332,11 @@ the command written on the text box
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method runOneCommand_Click</div>
+    <div id="PageTitle">Method MoveTo</div>
     <div id="Contents" />
 
     
- button command for single textbox
+ moves the cursor to given x and y position
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -314,14 +351,288 @@ the command written on the text box
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void runOneCommand_Click(object sender, EventArgs e)</pre></td></tr></tbody></table>
+    public void MoveTo(int x, int y)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>sender</div><div class='ParameterCommentContainer'>
+<div class='CommentParameterName'>x</div><div class='ParameterCommentContainer'>
+sets the x coordinate of cursor 
+</div>
+<div class='CommentParameterName'>y</div><div class='ParameterCommentContainer'>
+sets the y coordinate of cursor
+</div>
+
+    
+    
+    
+    
+    
+    
 
 </div>
-<div class='CommentParameterName'>e</div><div class='ParameterCommentContainer'>
 
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Rect</div>
+    <div id="Contents" />
+
+    
+ Creates a rectangle with given width and height and filled or not
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void Rect(int width, int height, bool filled)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>width</div><div class='ParameterCommentContainer'>
+width of rectangle
+</div>
+<div class='CommentParameterName'>height</div><div class='ParameterCommentContainer'>
+height of rectangle
+</div>
+<div class='CommentParameterName'>filled</div><div class='ParameterCommentContainer'>
+filled true or false
+</div>
+
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Reset</div>
+    <div id="Contents" />
+
+    
+ Resets the pen and cursor postion by setting cursor position to 0,0 and pen to black color
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void Reset()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Set</div>
+    <div id="Contents" />
+
+    
+ Sets bitmap to new width and height
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void Set(int width, int height)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>width</div><div class='ParameterCommentContainer'>
+new width of bitmap
+</div>
+<div class='CommentParameterName'>height</div><div class='ParameterCommentContainer'>
+new height of bitmap
+</div>
+
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method SetColour</div>
+    <div id="Contents" />
+
+    
+ sets pen color with RGB values
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void SetColour(int red, int green, int blue)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>red</div><div class='ParameterCommentContainer'>
+red int 255
+</div>
+<div class='CommentParameterName'>green</div><div class='ParameterCommentContainer'>
+green int 255
+</div>
+<div class='CommentParameterName'>blue</div><div class='ParameterCommentContainer'>
+blue int 255
+</div>
+
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Tri</div>
+    <div id="Contents" />
+
+    
+ Creates a triangle with the given width and height by calculating 3 points.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void Tri(int width, int height)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>width</div><div class='ParameterCommentContainer'>
+Width of the triangle
+</div>
+<div class='CommentParameterName'>height</div><div class='ParameterCommentContainer'>
+Height of the triangle
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method WriteText</div>
+    <div id="Contents" />
+
+    
+ Draws given string at current cursor position
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void WriteText(string text)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>text</div><div class='ParameterCommentContainer'>
+Desired text to be drawn
+</div>
+
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method penSize</div>
+    <div id="Contents" />
+
+    
+ Changes the pen size to given size
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void penSize(int size)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>size</div><div class='ParameterCommentContainer'>
+new int size of pen
 </div>
 
     
