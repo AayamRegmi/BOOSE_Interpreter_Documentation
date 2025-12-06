@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aayam Regmi ASE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 40px;
+        }
+
+        h1, h2 {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 15px 20px;
+            margin: 0;        
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* SECTION HEADER STYLE */
+        .section-title {
+            background: #0055cc; 
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Card Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.15s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card a {
+            text-decoration: none;
+            color: #0055cc;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .card p {
+            margin-top: 8px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Aayam Regmi's BOOSE Interpreter Documentation</h1>
+    <h2>ID: 77466864 – L6 ASE Assignment</h2>
+
+    <!-- Main Documentation Section -->
+    <div class="container">
+        <div class="section-title">Main Documentation</div>
+
+        <div class="grid">
+            <div class="card">
+                <a href="AppCanvas.html">AppCanvas</a>
+                <p>Handles drawing operations, canvas bitmap, shapes, and pen movement.</p>
+            </div>
+
+            <div class="card">
+                <a href="AppCommandFactory.html">AppCommandFactory</a>
+                <p>Factory responsible for creating command objects.</p>
+            </div>
+
+            <div class="card">
+                <a href="CircleCommand.html">CircleCommand</a>
+                <p>Implements drawing of circles with optional fill behavior.</p>
+            </div>
+
+            <div class="card">
+                <a href="DrawToCommand.html">DrawToCommand</a>
+                <p>Moves the pen to new coordinates while drawing a line.</p>
+            </div>
+
+            <div class="card">
+                <a href="Form1.html">Form1</a>
+                <p>Main Windows Form containing UI controls and output panel.</p>
+            </div>
+
+            <div class="card">
+                <a href="MoveToCommand.html">MoveToCommand</a>
+                <p>Moves the pen to a specified position without drawing.</p>
+            </div>
+
+            <div class="card">
+                <a href="PenCommand.html">PenCommand</a>
+                <p>Changes pen color.</p>
+            </div>
+
+            <div class="card">
+                <a href="RectangleCommand.html">RectangleCommand</a>
+                <p>Draws rectangles at the current pen location with width and height.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unit Test Section -->
+    <div class="container">
+        <div class="section-title">Unit Test Documentation</div>
+
+        <div class="grid">
+            <div class="card">
+                <a href="CircleUnitTest.html">CircleUnitTest</a>
+                <p>Tests radius validation and circle creation accuracy.</p>
+            </div>
+
+            <div class="card">
+                <a href="DrawToUnitTest.html">DrawToUnitTest</a>
+                <p>Ensures correct pen position updates and line rendering.</p>
+            </div>
+
+            <div class="card">
+                <a href="MoveToUnitTest.html">MoveToUnitTest</a>
+                <p>Verifies pen relocation without drawing artefacts.</p>
+            </div>
+
+            <div class="card">
+                <a href="PenUnitTest.html">PenUnitTest</a>
+                <p>Checks pen color, width, and mode changes for correctness.</p>
+            </div>
+
+            <div class="card">
+                <a href="RectangleUnitTest.html">RectangleUnitTest</a>
+                <p>Confirms correct height/width handling and rectangle drawing.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
