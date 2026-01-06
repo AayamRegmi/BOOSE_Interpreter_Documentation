@@ -7,14 +7,14 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class MultilineUnitTest</div>
+    <div id="PageTitle">Class InterpreterController</div>
     <div id="Contents" />
 
     
- Unit tests for executing multiple commands in a sequence (multiline programs)
+ API Controller for executing BOOSE interpreter commands and returning canvas output
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -26,7 +26,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class MultilineUnitTest</pre></td></tr></tbody></table>
+    public class InterpreterController : ControllerBase</pre></td></tr></tbody></table>
     
     
     
@@ -40,14 +40,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Multiline_Circle_Move_Circle_DoesNotThrow</div>
+    <div id="PageTitle">Method ExecuteCommands</div>
     <div id="Contents" />
 
     
- Draws a circle, moves the pen, and draws another circle
+ Executes BOOSE commands and returns the canvas as a Base64 image
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -59,7 +59,48 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Multiline_Circle_Move_Circle_DoesNotThrow()</pre></td></tr></tbody></table>
+    public IActionResult ExecuteCommands([FromBody] ExecuteRequest request)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>request</div><div class='ParameterCommentContainer'>
+Request containing the BOOSE commands to execute
+</div>
+
+    <div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+JSON response with success status, image, and debug information
+</div>
+
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method NormalizeCommand</div>
+    <div id="Contents" />
+
+    
+ Normalizes command syntax (same logic as Form1.cs) [4]
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private string NormalizeCommand(string line)</pre></td></tr></tbody></table>
     
     
     
@@ -73,14 +114,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Multiline_Rectangle_Triangle_WriteText_DoesNotThrow</div>
+    <div id="PageTitle">Method IsAssignmentLine</div>
     <div id="Contents" />
 
     
- Draws a rectangle, triangle, and writes text
+ Detects if a line is a direct assignment [4]
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -92,7 +133,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Multiline_Rectangle_Triangle_WriteText_DoesNotThrow()</pre></td></tr></tbody></table>
+    private bool IsAssignmentLine(string line)</pre></td></tr></tbody></table>
     
     
     
@@ -106,14 +147,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Multiline_Move_Draw_Clear_DoesNotThrow</div>
+    <div id="PageTitle">Method NormalizeAssignment</div>
     <div id="Contents" />
 
     
- Moves the pen, draws line, clears the canvas
+ Adds "set" prefix to assignment statements [4]
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -125,7 +166,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Multiline_Move_Draw_Clear_DoesNotThrow()</pre></td></tr></tbody></table>
+    private string NormalizeAssignment(string line)</pre></td></tr></tbody></table>
     
     
     
@@ -139,14 +180,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Multiline_PenSize_Draw_Reset_DoesNotThrow</div>
+    <div id="PageTitle">Class ExecuteRequest</div>
     <div id="Contents" />
 
     
- Sets pen size, draws line, resets canvas
+ Request model for execute endpoint
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -158,73 +199,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Multiline_PenSize_Draw_Reset_DoesNotThrow()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Multiline_Triangle_Move_Rectangle_DoesNotThrow</div>
-    <div id="Contents" />
-
-    
- Draws triangle, moves pen, draws rectangle
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Multiline_Triangle_Move_Rectangle_DoesNotThrow()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Multiline_Write_Circle_Clear_DoesNotThrow</div>
-    <div id="Contents" />
-
-    
- Writes text, draws circle, clears canvas
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Multiline_Write_Circle_Clear_DoesNotThrow()</pre></td></tr></tbody></table>
+    public class ExecuteRequest</pre></td></tr></tbody></table>
     
     
     

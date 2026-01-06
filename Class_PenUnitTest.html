@@ -7,14 +7,15 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class RectangleCommand</div>
+    <div id="PageTitle">Class PenUnitTest</div>
     <div id="Contents" />
 
     
- Command class for Rectangle command
+ Unit tests for the Pen command (RGB color) using TestAppCanvas for thread-safe testing
+ Tests are adjusted for current Set() behavior (splits on comma AND space)
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -26,7 +27,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class RectangleCommand : CommandThreeParameters, ICommand</pre></td></tr></tbody></table>
+    public class PenUnitTest</pre></td></tr></tbody></table>
     
     
     
@@ -40,14 +41,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor RectangleCommand</div>
+    <div id="PageTitle">Method Pen_ValidLiteralRGB_ExecutesSuccessfully</div>
     <div id="Contents" />
 
     
- Rectangle command constructor takes and sets current ICanvas canvas reference
+ Tests Pen with valid literal RGB values - should execute successfully
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -59,13 +60,9 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public RectangleCommand(ICanvas canvas)</pre></td></tr></tbody></table>
+    public void Pen_ValidLiteralRGB_ExecutesSuccessfully()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>canvas</div><div class='ParameterCommentContainer'>
-current ICanvas canvas refernce of the program
-</div>
-
+    
     
     
     
@@ -77,14 +74,14 @@ current ICanvas canvas refernce of the program
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Set</div>
+    <div id="PageTitle">Method Pen_ValidLiteralsWithCommaAndSpaces_ExecutesSuccessfully</div>
     <div id="Contents" />
 
     
- Sets the StoredProgram and splits parameters for the Rectangle command
+ Tests Pen with comma + spaces around RGB values - should parse correctly
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -96,16 +93,9 @@ current ICanvas canvas refernce of the program
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Set(StoredProgram Program, string Params)</pre></td></tr></tbody></table>
+    public void Pen_ValidLiteralsWithCommaAndSpaces_ExecutesSuccessfully()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>Program</div><div class='ParameterCommentContainer'>
-current program parameter
-</div>
-<div class='CommentParameterName'>Params</div><div class='ParameterCommentContainer'>
-parameters of command in string format
-</div>
-
+    
     
     
     
@@ -117,14 +107,14 @@ parameters of command in string format
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CheckParameters</div>
+    <div id="PageTitle">Method Pen_SimpleExpressionNoSpaces_ExecutesSuccessfully</div>
     <div id="Contents" />
 
     
- Checks the parameters for the Rectangle command for width, height and optional filled flag
+ Tests Pen with simple expressions (no spaces) that evaluate to valid RGB values
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -136,40 +126,13 @@ parameters of command in string format
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] Parameters)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>Parameters</div><div class='ParameterCommentContainer'>
-array with parameters split
-</div>
-
+    public void Pen_SimpleExpressionNoSpaces_ExecutesSuccessfully()</pre></td></tr></tbody></table>
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>ArgumentException</span></td>
-<td>throws when number of parameters are not correct</td>
-</tr>
-</table
-</div>
-</div>
-
+    
+    
     
     
 
@@ -177,14 +140,14 @@ array with parameters split
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Compile</div>
+    <div id="PageTitle">Method Pen_TooFewParameters_ThrowsException</div>
     <div id="Contents" />
 
     
- Checks if the parameters are correct data type for Rectangle command
+ Tests Pen with only two parameters - expects CommandException
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -196,36 +159,13 @@ array with parameters split
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Compile()</pre></td></tr></tbody></table>
+    public void Pen_TooFewParameters_ThrowsException()</pre></td></tr></tbody></table>
     
     
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>ArgumentException</span></td>
-<td>thows when data type of width and height are incorrect</td>
-</tr>
-</table
-</div>
-</div>
-
     
     
 
@@ -233,14 +173,14 @@ array with parameters split
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
+    <div id="PageTitle">Method Pen_OutOfRangeValue_ThrowsException</div>
     <div id="Contents" />
 
     
- Executes ICanvas Canvas Rectangle method
+ Tests Pen with an RGB value &gt; 255 - expects CommandException
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -252,7 +192,41 @@ array with parameters split
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Execute()</pre></td></tr></tbody></table>
+    public void Pen_OutOfRangeValue_ThrowsException()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Pen_ExpressionWithSpaces_ThrowsAsExpected</div>
+    <div id="Contents" />
+
+    
+ Documents that expressions containing spaces are not supported in current version
+ (splits into multiple parts → validation fails)
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void Pen_ExpressionWithSpaces_ThrowsAsExpected()</pre></td></tr></tbody></table>
     
     
     

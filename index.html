@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aayam Regmi ASE</title>
+    <title>Aayam Regmi BOOSE Assignment Documentation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background: #f7f7f7;
             padding: 40px;
+            color: #333;
         }
 
         h1, h2 {
@@ -25,10 +26,9 @@
 
         h2 {
             text-align: center;
-            margin-bottom: 25px;
+            margin: 40px 0 25px 0;
         }
 
-        /* SECTION HEADER STYLE */
         .section-title {
             background: #0055cc; 
             color: white;
@@ -40,166 +40,175 @@
             letter-spacing: 0.5px;
         }
 
-        /* Card Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
+            margin-bottom: 40px;
         }
 
-        /* Card Styles */
         .card {
             background: white;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.15s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
+
         .card a {
             text-decoration: none;
             color: #0055cc;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
         }
+
         .card p {
-            margin-top: 8px;
+            margin: 0;
             color: #555;
-            line-height: 1.4;
+            line-height: 1.5;
+            font-size: 0.95rem;
         }
 
         .container {
-            max-width: 900px;
-            margin: 0 auto 50px auto;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
         }
 
+        .highlight-section {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Aayam Regmi's BOOSE Interpreter Documentation</h1>
-    <h2>ID: 77466864 – L6 ASE Assignment</h2>
+    <h1>Aayam Regmi's BOOSE Interpreter</h1>
+    <h2>ID: 77466864 – Level 6 Assignment</h2>
+    <h3>Documentations</h3>
 
-    <!-- Main Documentation Section -->
+
+    <!-- ============================================= -->
+    <!--               CORE CLASSES                    -->
+    <!-- ============================================= -->
     <div class="container">
-        <div class="section-title">Main Documentation</div>
+        <div class="section-title">Core BOOSE Commands & Shapes</div>
 
         <div class="grid">
-            <div class="card">
-                <a href="AppCanvas.html">AppCanvas</a>
-                <p>Handles drawing operations, canvas bitmap, shapes, and pen movement.</p>
-            </div>
-
-            <div class="card">
-                <a href="AppCommandFactory.html">AppCommandFactory</a>
-                <p>Factory responsible for creating command objects.</p>
-            </div>
-
-            <div class="card">
-                <a href="CircleCommand.html">CircleCommand</a>
-                <p>Implements drawing of circles with optional fill behavior.</p>
-            </div>
-
-            <div class="card">
-                <a href="DrawToCommand.html">DrawToCommand</a>
-                <p>Moves the pen to new coordinates while drawing a line.</p>
-            </div>
-
-            <div class="card">
-                <a href="Form1.html">Form1</a>
-                <p>Main Windows Form containing UI controls and output panel.</p>
-            </div>
-
-            <div class="card">
-                <a href="MoveToCommand.html">MoveToCommand</a>
-                <p>Moves the pen to a specified position without drawing.</p>
-            </div>
-
-            <div class="card">
-                <a href="PenCommand.html">PenCommand</a>
-                <p>Changes pen color.</p>
-            </div>
-
-            <div class="card">
-                <a href="PenSize.html">PenSize</a>
-                <p>Changes pen size.</p>
-            </div>
-
-            <div class="card">
-                <a href="RectangleCommand.html">RectangleCommand</a>
-                <p>Draws rectangles at the current pen location with width and height.</p>
-            </div>
-
-            <div class="card">
-                <a href="TriangleCommand.html">TriangleCommand</a>
-                <p>Draws Triangle at the current pen location with width and height. Calculates 3 sides</p>
-            </div>
-
-            <div class="card">
-                <a href="WriteTextCommand.html">WriteTextCommand</a>
-                <p>Draws String text at the current pen location according to pen thickness.</p>
-            </div>
-
-            <div class="card">
-                <a href="ResetCommand.html">ResetCommand</a>
-                <p>Resets the pen and its position to 0,0.</p>
-            </div>
-
-            <div class="card">
-                <a href="ClearCommand.html">ClearCommand</a>
-                <p>Clears Canvas.</p>
-            </div>
-
-            
+            <div class="card"><a href="Class_CircleCommand.html">CircleCommand</a><p>Draws circles with optional fill</p></div>
+            <div class="card"><a href="Class_RectangleCommand.html">RectangleCommand</a><p>Draws rectangles with width & height</p></div>
+            <div class="card"><a href="Class_TriangleCommand.html">TriangleCommand</a><p>Draws triangles (calculates sides)</p></div>
+            <div class="card"><a href="Class_DrawToCommand.html">DrawToCommand</a><p>Draws line to new coordinates</p></div>
+            <div class="card"><a href="Class_MoveToCommand.html">MoveToCommand</a><p>Moves pen without drawing</p></div>
+            <div class="card"><a href="Class_PenCommand.html">PenCommand</a><p>Changes pen color</p></div>
+            <div class="card"><a href="Class_PenSizeCommand.html">PenSizeCommand</a><p>Changes pen thickness</p></div>
+            <div class="card"><a href="Class_WriteTextCommand.html">WriteTextCommand</a><p>Draws text at pen position</p></div>
+            <div class="card"><a href="Class_ResetCommand.html">ResetCommand</a><p>Resets pen position to (0,0)</p></div>
+            <div class="card"><a href="Class_ClearCommand.html">ClearCommand</a><p>Clears the entire canvas</p></div>
         </div>
     </div>
 
-    <!-- Unit Test Section -->
+    <!-- ============================================= -->
+    <!--               CONTROL FLOW                    -->
+    <!-- ============================================= -->
     <div class="container">
-        <div class="section-title">Unit Test Documentation</div>
+        <div class="section-title">Control Flow & Loops</div>
 
         <div class="grid">
-            <div class="card">
-                <a href="CircleUnitTest.html">CircleUnitTest</a>
-                <p>Tests radius validation and circle creation accuracy.</p>
-            </div>
+            <div class="card"><a href="Class_IfCommand.html">IfCommand</a><p>If statement</p></div>
+            <div class="card"><a href="Class_ElseCommand.html">ElseCommand</a><p>Else clause</p></div>
+            <div class="card"><a href="Class_EndIfCommand.html">EndIfCommand</a><p>Ends if block</p></div>
+            <div class="card"><a href="Class_ForCommand.html">ForCommand</a><p>For loop with step support</p></div>
+            <div class="card"><a href="Class_EndForCommand.html">EndForCommand</a><p>Ends for loop</p></div>
+            <div class="card"><a href="Class_WhileCommand.html">WhileCommand</a><p>While loop</p></div>
+            <div class="card"><a href="Class_EndWhileCommand.html">EndWhileCommand</a><p>Ends while loop</p></div>
+        </div>
+    </div>
 
-            <div class="card">
-                <a href="DrawToUnitTest.html">DrawToUnitTest</a>
-                <p>Ensures correct pen position updates and line rendering.</p>
-            </div>
+    <!-- ============================================= -->
+    <!--               METHODS & CALLS                 -->
+    <!-- ============================================= -->
+    <div class="container">
+        <div class="section-title">Custom Method System (Replaces BOOSE limitation)</div>
 
-            <div class="card">
-                <a href="MoveToUnitTest.html">MoveToUnitTest</a>
-                <p>Verifies pen relocation without drawing artefacts.</p>
-            </div>
+        <div class="grid">
+            <div class="card"><a href="Class_MethodCommand.html">MethodCommand</a><p>Method declaration with parameters & return type</p></div>
+            <div class="card"><a href="Class_CallCommand.html">CallCommand</a><p>Calls a method with arguments</p></div>
+            <div class="card"><a href="Class_EndMethodCommand.html">EndMethodCommand</a><p>Ends method & returns</p></div>
+        </div>
+    </div>
 
-            <div class="card">
-                <a href="PenUnitTest.html">PenUnitTest</a>
-                <p>Checks pen color mode changes for correctness.</p>
-            </div>
+    <!-- ============================================= -->
+    <!--               VARIABLES & MEMORY              -->
+    <!-- ============================================= -->
+    <div class="container">
+        <div class="section-title">Variables & Memory Operations</div>
 
-            <div class="card">
-                <a href="RectangleUnitTest.html">RectangleUnitTest</a>
-                <p>Confirms correct height/width handling and rectangle drawing.</p>
-            </div>
+        <div class="grid">
+            <div class="card"><a href="Class_IntCommand.html">IntCommand</a><p>Integer variable</p></div>
+            <div class="card"><a href="Class_RealCommand.html">RealCommand</a><p>Real (double) variable</p></div>
+            <div class="card"><a href="Class_BooleanCommand.html">BooleanCommand</a><p>Boolean variable</p></div>
+            <div class="card"><a href="Class_ArrayCommand.html">ArrayCommand</a><p>Array declaration & access</p></div>
+            <div class="card"><a href="Class_AssignCommand.html">AssignCommand</a><p>Assignment operation</p></div>
+            <div class="card"><a href="Class_PeekCommand.html">PeekCommand</a><p>Read from memory address</p></div>
+            <div class="card"><a href="Class_PokeCommand.html">PokeCommand</a><p>Write to memory address</p></div>
+        </div>
+    </div>
 
-             <div class="card">
-                <a href="TriangleUnitTest.html">TriangleUnitTest</a>
-                <p>Confirms correct height/width handling and triangle drawing.</p>
-            </div>
+    <!-- ============================================= -->
+    <!--               UNIT TESTS                      -->
+    <!-- ============================================= -->
+    <div class="container">
+        <div class="section-title">Unit Tests</div>
 
-             <div class="card">
-                <a href="PenSizeUnitTest.html">PenSizeUnitTest</a>
-                <p>Checks pen width size changes.</p>
-            </div>
+        <div class="grid">
+            <div class="card"><a href="Class_CircleUnitTest.html">CircleUnitTest</a><p>Radius & drawing accuracy</p></div>
+            <div class="card"><a href="Class_DrawToUnitTest.html">DrawToUnitTest</a><p>Line drawing & position</p></div>
+            <div class="card"><a href="Class_MoveToUnitTest.html">MoveToUnitTest</a><p>Pen relocation</p></div>
+            <div class="card"><a href="Class_PenUnitTest.html">PenUnitTest</a><p>Color changes</p></div>
+            <div class="card"><a href="Class_RectangleUnitTest.html">RectangleUnitTest</a><p>Rectangle dimensions</p></div>
+            <div class="card"><a href="Class_TriangleUnitTest.html">TriangleUnitTest</a><p>Triangle drawing</p></div>
+            <div class="card"><a href="Class_PenSizeUnitTest.html">PenSizeUnitTest</a><p>Pen thickness</p></div>
+            <div class="card"><a href="Class_IntCommandUnitTest.html">IntCommandUnitTest</a><p>Integer variable</p></div>
+            <div class="card"><a href="Class_BooleanCommandUnitTest.html">BooleanCommandUnitTest</a><p>Boolean variable</p></div>
+            <div class="card"><a href="Class_ArrayUnitTest.html">ArrayUnitTest</a><p>Array operations</p></div>
+            <div class="card"><a href="Class_ForUnitTest.html">ForUnitTest</a><p>For loop behavior</p></div>
+            <div class="card"><a href="Class_IfUnitTest.html">IfUnitTest</a><p>If/Else logic</p></div>
+            <div class="card"><a href="Class_MethodCallUnitTest.html">MethodCallUnitTest</a><p>Custom method calling system</p></div>
+        </div>
+    </div>
 
-             <div class="card">
-                <a href="MultiLineUnitTest.html">MultiLineUnitTest</a>
-                <p>Test multiple commands simulating multiline inputs.</p>
-            </div>
+    <!-- ============================================= -->
+    <!--               WEB INTERFACE                   -->
+    <!-- ============================================= -->
+    <div class="container">
+        <div class="section-title">Web Interface Components</div>
+
+        <div class="grid">
+            <div class="card"><a href="Class_WebCanvas.html">WebCanvas</a><p>Web-based canvas implementation</p></div>
+            <div class="card"><a href="Class_InterpreterController.html">InterpreterController</a><p>Controls web interpreter execution</p></div>
+            <div class="card"><a href="Class_AppCanvas.html">AppCanvas</a><p>Base canvas handling (shared)</p></div>
+        </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!--               INFRASTRUCTURE                  -->
+    <!-- ============================================= -->
+    <div class="container">
+        <div class="section-title">Infrastructure & Factory</div>
+
+        <div class="grid">
+            <div class="card"><a href="Class_AppCommandFactory.html">AppCommandFactory</a><p>Creates all command instances</p></div>
+            <div class="card"><a href="Class_ExtendedStoredProgram.html">ExtendedStoredProgram</a><p>Extended program with method registry</p></div>
         </div>
     </div>
 

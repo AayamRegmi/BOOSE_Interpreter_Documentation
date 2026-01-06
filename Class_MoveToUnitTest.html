@@ -7,14 +7,15 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class TriangleUnitTest</div>
+    <div id="PageTitle">Class MoveToUnitTest</div>
     <div id="Contents" />
 
     
- Triangle command unit tests
+ Unit tests for the MoveTo command using TestAppCanvas for thread-safe testing
+ Tests are adjusted for current Set() behavior (splits on comma AND space)
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -26,7 +27,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class TriangleUnitTest</pre></td></tr></tbody></table>
+    public class MoveToUnitTest</pre></td></tr></tbody></table>
     
     
     
@@ -40,14 +41,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Triangle_ValidParameters_DoesNotThrow</div>
+    <div id="PageTitle">Method MoveTo_ValidLiteralsWithSpaceSeparator_ExecutesSuccessfully</div>
     <div id="Contents" />
 
     
- Commands Triangle with valid width and height, checks for successful execution
+ Tests MoveTo with valid literal integers separated by space - should execute successfully
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -59,7 +60,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Triangle_ValidParameters_DoesNotThrow()</pre></td></tr></tbody></table>
+    public void MoveTo_ValidLiteralsWithSpaceSeparator_ExecutesSuccessfully()</pre></td></tr></tbody></table>
     
     
     
@@ -73,14 +74,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Triangle_LargeParameters_DoesNotThrow</div>
+    <div id="PageTitle">Method MoveTo_ValidLiteralsWithCommaAndSpaces_ExecutesSuccessfully</div>
     <div id="Contents" />
 
     
- Commands Triangle with larger width and height, checks for successful execution
+ Tests MoveTo with comma + spaces - current split removes empty entries
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -92,7 +93,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Triangle_LargeParameters_DoesNotThrow()</pre></td></tr></tbody></table>
+    public void MoveTo_ValidLiteralsWithCommaAndSpaces_ExecutesSuccessfully()</pre></td></tr></tbody></table>
     
     
     
@@ -106,14 +107,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Triangle_EqualWidthHeight_DoesNotThrow</div>
+    <div id="PageTitle">Method MoveTo_SimpleExpressionNoSpaces_ExecutesSuccessfully</div>
     <div id="Contents" />
 
     
- Commands Triangle with equal width and height, checks for successful execution
+ Tests MoveTo with simple expressions that contain no spaces - should work
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -125,7 +126,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Triangle_EqualWidthHeight_DoesNotThrow()</pre></td></tr></tbody></table>
+    public void MoveTo_SimpleExpressionNoSpaces_ExecutesSuccessfully()</pre></td></tr></tbody></table>
     
     
     
@@ -139,14 +140,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Triangle_InvalidWidth_ThrowsException</div>
+    <div id="PageTitle">Method MoveTo_MissingYParameter_ThrowsException</div>
     <div id="Contents" />
 
     
- Commands Triangle with negative width and expects an exception
+ Tests MoveTo with only one parameter - expects CommandException
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -158,7 +159,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Triangle_InvalidWidth_ThrowsException()</pre></td></tr></tbody></table>
+    public void MoveTo_MissingYParameter_ThrowsException()</pre></td></tr></tbody></table>
     
     
     
@@ -172,14 +173,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Triangle_InvalidHeight_ThrowsException</div>
+    <div id="PageTitle">Method MoveTo_InvalidXValue_ThrowsException</div>
     <div id="Contents" />
 
     
- Commands Triangle with non-numeric height and expects an exception
+ Tests MoveTo with invalid X value - expects CommandException
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -191,7 +192,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Triangle_InvalidHeight_ThrowsException()</pre></td></tr></tbody></table>
+    public void MoveTo_InvalidXValue_ThrowsException()</pre></td></tr></tbody></table>
     
     
     
@@ -205,14 +206,15 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Triangle_InvalidParameterCount_ThrowsException</div>
+    <div id="PageTitle">Method DrawTo_ExpressionWithSpaces_ThrowsAsExpected</div>
     <div id="Contents" />
 
     
- Commands Triangle with missing parameter and expects an exception
+ Tests that expressions containing spaces are NOT supported in current version
+ (this test documents/guards the current limitation)
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -224,7 +226,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Triangle_InvalidParameterCount_ThrowsException()</pre></td></tr></tbody></table>
+    public void DrawTo_ExpressionWithSpaces_ThrowsAsExpected()</pre></td></tr></tbody></table>
     
     
     

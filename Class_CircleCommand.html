@@ -7,14 +7,16 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class PenCommand</div>
+    <div id="PageTitle">Class CircleCommand</div>
     <div id="Contents" />
 
     
- Command class for Pen Color command
+ Implements the Circle drawing command for the BOOSE language.
+ Draws a circle on the canvas using a radius expression
+ evaluated at runtime, allowing variables and expressions.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -26,7 +28,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class PenCommand : CommandThreeParameters,ICommand</pre></td></tr></tbody></table>
+    public class CircleCommand : CommandTwoParameters, ICommand</pre></td></tr></tbody></table>
     
     
     
@@ -40,14 +42,15 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor PenCommand</div>
+    <div id="PageTitle">Constructor CircleCommand</div>
     <div id="Contents" />
 
     
- sets the current ICanvas canvas reference
+ Initializes a new instance of the CircleCommand class
+ with the current application canvas.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -59,11 +62,11 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public PenCommand(ICanvas canvas)</pre></td></tr></tbody></table>
+    public CircleCommand(ICanvas canvas)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
 <div class='CommentParameterName'>canvas</div><div class='ParameterCommentContainer'>
-ICanvas canvas reference of current program
+Canvas used for rendering shapes.
 </div>
 
     
@@ -81,10 +84,10 @@ ICanvas canvas reference of current program
     <div id="Contents" />
 
     
- Sets the StoredProgram and splits parameters for the Pen command
+ Sets the StoredProgram reference and splits parameters.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -98,14 +101,7 @@ ICanvas canvas reference of current program
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
     public override void Set(StoredProgram Program, string Params)</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>Program</div><div class='ParameterCommentContainer'>
-current stored program reference
-</div>
-<div class='CommentParameterName'>Params</div><div class='ParameterCommentContainer'>
-parameters to split and stored in array
-</div>
-
+    
     
     
     
@@ -121,10 +117,10 @@ parameters to split and stored in array
     <div id="Contents" />
 
     
- Checks the correct number of parameters
+ Validates the number of parameters.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -136,40 +132,13 @@ parameters to split and stored in array
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] Parameters)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>Parameters</div><div class='ParameterCommentContainer'>
-
-</div>
-
+    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>ArgumentException</span></td>
-<td></td>
-</tr>
-</table
-</div>
-</div>
-
+    
+    
     
     
 
@@ -181,10 +150,11 @@ parameters to split and stored in array
     <div id="Contents" />
 
     
- Checks and compiles the parameters for the Pen command by checking if parametes are correct data type
+ Compiles the Circle command.
+ Determines the filled flag if second parameter is provided.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -203,29 +173,6 @@ parameters to split and stored in array
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>ArgumentException</span></td>
-<td>Throws when parameters are not int or out of range 0 to 255</td>
-</tr>
-</table
-</div>
-</div>
-
     
     
 
@@ -237,10 +184,13 @@ parameters to split and stored in array
     <div id="Contents" />
 
     
- Executes the Pen command by setting the pen colour on the canvas
+ Executes the Circle command.
+ Evaluates the first parameter as a numeric expression for radius,
+ second parameter is optional filled flag.
+ Supports radius syntax by trimming angle brackets.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax

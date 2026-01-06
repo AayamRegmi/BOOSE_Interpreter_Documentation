@@ -7,14 +7,15 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class DrawToUnitTest</div>
+    <div id="PageTitle">Class IntCommandUnitTest</div>
     <div id="Contents" />
 
     
- DrawTo command unit tests
+ Unit tests for the IntCommand (integer variable declaration and assignment)
+ using StoredProgram for variable management
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -26,7 +27,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class DrawToUnitTest</pre></td></tr></tbody></table>
+    public class IntCommandUnitTest</pre></td></tr></tbody></table>
     
     
     
@@ -40,14 +41,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method DrawTo_ValidCoordinates_UpdatesPenPosition</div>
+    <div id="PageTitle">Method IntCommand_DeclareWithoutValue_DefaultsToZero</div>
     <div id="Contents" />
 
     
- Commands DrawTo to valid coordinates and checks if pen position is updated correctly
+ Tests simple declaration "int count" - should create variable with value 0
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -59,7 +60,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void DrawTo_ValidCoordinates_UpdatesPenPosition()</pre></td></tr></tbody></table>
+    public void IntCommand_DeclareWithoutValue_DefaultsToZero()</pre></td></tr></tbody></table>
     
     
     
@@ -73,14 +74,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method DrawTo_InvalidParameterCount_ThrowsException</div>
+    <div id="PageTitle">Method IntCommand_DeclareWithLiteral_InitializesCorrectly</div>
     <div id="Contents" />
 
     
- Commands DrawTo with invalid parameter count and expects an exception
+ Tests declaration with literal value "int score = 42" - should set correct value
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -92,7 +93,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void DrawTo_InvalidParameterCount_ThrowsException()</pre></td></tr></tbody></table>
+    public void IntCommand_DeclareWithLiteral_InitializesCorrectly()</pre></td></tr></tbody></table>
     
     
     
@@ -106,14 +107,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method DrawTo_NonIntegerParameter_ThrowsException</div>
+    <div id="PageTitle">Method IntCommand_DeclareWithExpression_EvaluatesCorrectly</div>
     <div id="Contents" />
 
     
- Commands DrawTo with non-integer parameters and expects an exception
+ Tests declaration with expression "int total = 10 + 35" - should evaluate and store
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -125,7 +126,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void DrawTo_NonIntegerParameter_ThrowsException()</pre></td></tr></tbody></table>
+    public void IntCommand_DeclareWithExpression_EvaluatesCorrectly()</pre></td></tr></tbody></table>
     
     
     
@@ -139,14 +140,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method DrawTo_NegativeCoordinates_UpdatesPenPosition</div>
+    <div id="PageTitle">Method IntCommand_ReassignExistingVariable_UpdatesValue</div>
     <div id="Contents" />
 
     
- Commands DrawTo with negative coordinates and checks if pen position is updated
+ Tests re-assignment "x = 100" after declaration - should update value
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -158,7 +159,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void DrawTo_NegativeCoordinates_UpdatesPenPosition()</pre></td></tr></tbody></table>
+    public void IntCommand_ReassignExistingVariable_UpdatesValue()</pre></td></tr></tbody></table>
     
     
     
@@ -172,14 +173,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method DrawTo_MultiLineProgram_PenInExpectedPosition</div>
+    <div id="PageTitle">Method IntCommand_InvalidExpressionInDeclaration_ThrowsException</div>
     <div id="Contents" />
 
     
- Commands a MoveTo followed by multiple DrawTo commands and checks final pen position
+ Tests declaration with invalid expression "int bad = hello" - expects CommandException
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -191,7 +192,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void DrawTo_MultiLineProgram_PenInExpectedPosition()</pre></td></tr></tbody></table>
+    public void IntCommand_InvalidExpressionInDeclaration_ThrowsException()</pre></td></tr></tbody></table>
     
     
     
@@ -205,14 +206,14 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method DrawTo_BoundaryCoordinates_UpdatesPenPosition</div>
+    <div id="PageTitle">Method IntCommand_InvalidExpressionInAssignment_ThrowsException</div>
     <div id="Contents" />
 
     
- Commands DrawTo to boundary coordinates and checks if pen position is updated
+ Tests assignment with invalid expression "x = abc" - expects CommandException
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\aayam\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -224,7 +225,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void DrawTo_BoundaryCoordinates_UpdatesPenPosition()</pre></td></tr></tbody></table>
+    public void IntCommand_InvalidExpressionInAssignment_ThrowsException()</pre></td></tr></tbody></table>
     
     
     
